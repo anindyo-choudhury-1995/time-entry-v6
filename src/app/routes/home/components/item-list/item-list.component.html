@@ -1,0 +1,27 @@
+<mat-expansion-panel class="margin-m" *ngFor="let listItem of listItems, let i = index">
+    <mat-expansion-panel-header>
+        <mat-panel-title>
+            <span mat-line class="display-flex justify-content-space-between align-items-center">
+                <span>
+                    <div><b>{{listItem.srNumber ? listItem.srNumber : 'New SR Number' }}</b></div>
+                    <div> {{listItem.taskType ? listItem.taskType : 'New Task Type'}}</div>
+                    <div>{{listItem.deliveryType ? listItem.deliveryType : 'New Delivery Type'}} </div>
+                </span>
+            </span>
+        </mat-panel-title>
+    </mat-expansion-panel-header>
+    <app-edit-details 
+      [id]="listItem.id"
+      [isNew]="listItem.isNew"
+      [selectedSRNumber]="listItem.srNumber"
+      [selectedTaskType]="listItem.taskType"
+      [selectedDeliveryType]="listItem.deliveryType"
+      [time]="listItem.time"
+      [note]="listItem.note"
+      [sRNumbers]="sRNumbers" 
+      [taskTypes]="taskTypes" 
+      [deliveryTypes]="deliveryTypes"
+      (deleteItem)="deleteItemById($event)"
+      >
+    </app-edit-details>
+</mat-expansion-panel>

@@ -1,0 +1,10 @@
+<div class="display-flex justify-content-space-around align-items-center padding-m">
+    <mat-form-field class="width-150-px">
+        <input matInput [min]="minStartDate" [max]="maxStartDate" [matDatepicker]="pickerStart"
+        (dateChange)="addEvent($event)"
+            [placeholder]="'Date'" [(ngModel)]="startDate">
+        <mat-datepicker-toggle matSuffix [for]="pickerStart"></mat-datepicker-toggle>
+        <mat-datepicker #pickerStart></mat-datepicker>
+    </mat-form-field>
+    <span>14-DEC-19 - 20-DEC-19</span>
+</div>

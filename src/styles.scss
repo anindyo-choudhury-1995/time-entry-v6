@@ -1,0 +1,244 @@
+// Custom Theming for Angular Material
+// For more information: https://material.angular.io/guide/theming
+@import "~@angular/material/theming";
+// Plus imports for other components in your app.
+
+// Include the common styles for Angular Material. We include this here so that you only
+// have to load a single css file for Angular Material in your app.
+// Be sure that you only ever include this mixin once!
+@include mat-core();
+
+// Define the palettes for your theme using the Material Design palettes available in palette.scss
+// (imported above). For each palette, you can optionally specify a default, lighter, and darker
+// hue. Available color palettes: https://material.io/design/color/
+$primary: mat-palette($mat-red, 900);
+$accent: mat-palette($mat-indigo);
+
+// The warn palette is optional (defaults to red).
+$warn: mat-palette($mat-deep-orange, A400);
+
+// Create the theme object (a Sass map containing all of the palettes).
+$time-entry-mockup-theme: mat-light-theme($primary, $accent, $warn);
+
+// Include theme styles for core and each component used in your app.
+// Alternatively, you can import and @include the theme mixins for each component
+// that you are using.
+@include angular-material-theme($time-entry-mockup-theme);
+
+/* You can add global styles to this file, and also import other style files */
+
+html,
+body {
+    height: 100%;
+}
+body {
+    margin: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+// position
+
+.position-absolute {
+    position: absolute !important;
+}
+
+// height
+
+.height-48-px {
+    height: 48px !important;
+}
+
+// width
+
+.width-auto {
+    width: auto !important;
+}
+
+.width-48-px {
+    width: 48px !important;
+}
+
+.width-100-percent {
+    width: 100%;
+}
+
+// anchor
+
+a {
+    text-decoration: none !important;
+}
+
+// flex
+
+.display-flex {
+    display: flex !important;
+}
+
+.flex-direction-row {
+    flex-direction: row;
+}
+
+.flex-direction-column {
+    flex-direction: column;
+}
+
+.flex-wrap-wrap {
+    flex-wrap: wrap !important;
+}
+
+.justify-content-space-around {
+    justify-content: space-around !important;
+}
+
+.justify-content-space-between {
+    justify-content: space-between !important;
+}
+
+.justify-content-center {
+    justify-content: center !important;
+}
+
+.align-items-center {
+    align-items: center !important;
+}
+
+// top
+
+// right
+
+.right-m {
+    right: 16px !important;
+}
+
+// bottom
+
+.bottom-m {
+    bottom: 16px !important;
+}
+
+// left
+
+//font-sice
+
+.font-size-xxxl {
+    font-size: 48px !important;
+}
+
+// padding
+
+.padding-remove {
+    padding: 0px !important;
+}
+
+.padding-xs {
+    padding: 4px !important;
+}
+
+.padding-s {
+    padding: 8px !important;
+}
+
+.padding-m {
+    padding: 16px !important;
+}
+
+.padding-l {
+    padding: 24px !important;
+}
+
+.padding-xl {
+    padding: 32px !important;
+}
+
+.padding-top-xs {
+    padding-top: 4px !important;
+}
+
+.padding-top-s {
+    padding-top: 8px !important;
+}
+
+.padding-top-m {
+    padding-top: 16px !important;
+}
+
+.padding-top-l {
+    padding-top: 24px !important;
+}
+
+.padding-top-xl {
+    padding-top: 32px !important;
+}
+
+.padding-bottom-xs {
+    padding-bottom: 4px !important;
+}
+
+.padding-bottom-s {
+    padding-bottom: 8px !important;
+}
+
+.padding-bottom-m {
+    padding-bottom: 16px !important;
+}
+
+.padding-bottom-l {
+    padding-bottom: 24px !important;
+}
+
+.padding-bottom-xl {
+    padding-bottom: 32px !important;
+}
+
+// margin
+
+.margin-xs {
+    margin: 4px !important;
+}
+
+.margin-s {
+    margin: 8px !important;
+}
+
+.margin-m {
+    margin: 16px !important;
+}
+
+.margin-l {
+    margin: 24px !important;
+}
+
+.margin-xl {
+    margin: 32px !important;
+}
+
+.margin-top-xs {
+    margin-top: 4px !important;
+}
+
+.margin-top-s {
+    margin-top: 8px !important;
+}
+
+.margin-top-m {
+    margin-top: 16px !important;
+}
+
+.margin-top-l {
+    margin-top: 24px !important;
+}
+
+.margin-top-xl {
+    margin-top: 32px !important;
+}
+
+// text-align
+
+.text-align-center {
+    text-align: center !important;
+}
+
+// .page-container {
+//     height: calc(100vh - 56px);
+//     overflow: auto;
+// }

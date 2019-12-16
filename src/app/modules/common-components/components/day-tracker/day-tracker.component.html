@@ -1,0 +1,11 @@
+<div class="padding-top-m padding-bottom-m display-flex justify-content-space-around margin-m">
+    <div *ngFor="let dayTracker of dayTrackers">
+        <div class="text-align-center padding-bottom-s">
+            {{ dayTracker.time }}
+        </div>
+        <div>
+            <button mat-mini-fab [disabled]="dayTracker.selected" (click)="selectDayById(dayTracker.id)"
+                color="primary">{{ dayTracker.day }}</button>
+        </div>
+    </div>
+</div>
